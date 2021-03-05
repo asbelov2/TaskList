@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task list</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script type="text/javascript" src="js/index.js"></script>
+  <div class="body">
+    <div class="header">
+      <H1>Task list</H1>
+    </div>
+    <div class="task-manage">
+      <div class="task-add">
+        <div class="task-textedit">
+          <input type="text" id="task-textedit" placeholder="Enter text...">
+        </div>
+        <div>
+          <button class="task-button" id="task-add">ADD TASK</button>
+        </div>
+      </div>
+
+      <div class="task-additional-buttons">
+        <div>
+          <button class="task-button task-removeall" id="task-removeall">REMOVE ALL</button>
+        </div>
+        <div >
+          <button class="task-button task-readyall" id="task-readyall">READY ALL</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="todolist">
+
+    </div>
+    
+  </div>
+</body>
+<template id="task">
+  <div class="task">
+    <div class="task-left">
+      <div class="task-content">
+        <p class="task-content-text"></p>
+      </div>
+      <div class="task-buttons">
+        <button class="task-button task-ready">READY</button>
+        <button class="task-button task-unready">UNREADY</button>
+        <button class="task-button task-delete">DELETE</button>
+      </div>
+    </div>
+    <div class="task-circle">
+    </div>
+
+  </div>
+</template>
+</html>
