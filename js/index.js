@@ -5,11 +5,9 @@ window.onload = () => {
   document.getElementById('task-add').addEventListener('click', async() => {
     let cid = id;
     let taskItem = document.createElement('div');
-    console.log(document.getElementById('task-textedit'));
     taskText = document.getElementById('task-textedit').value;
     taskItem.id = 'b' + id;
     tasks.push({text:taskText, id:id, readiness:'UNREADY'});
-    console.log(tasks, tasks[id], id);
     document.querySelector('#task').content.querySelector('p').innerText = tasks[id].text;
     document.querySelector('#task').content.querySelector('.task-circle').className='task-circle task-circle-red';
     document.querySelector('#task').content.querySelector('.task-unready').style.display = 'none';
@@ -17,9 +15,7 @@ window.onload = () => {
     taskItem.innerHTML = document.getElementById('task').innerHTML;
     document.getElementsByClassName('todolist')[0].appendChild(taskItem);
 
-    document.querySelector('#b' + id).querySelector('.task-ready').addEventListener('click', async() => {
-      console.log(tasks,tasks[cid],cid);
-      
+    document.querySelector('#b' + id).querySelector('.task-ready').addEventListener('click', async() => {  
       tasks[cid].readiness = 'READY';
       document.querySelector('#b' + cid).querySelector('.task-circle').className='task-circle task-circle-green';
       document.querySelector('#b' + cid).querySelector('.task-ready').style.display = 'none';
@@ -51,7 +47,9 @@ window.onload = () => {
     for(let i = 0; i < tasks.length; ++i)
     {
       tasks[i].readiness='READY';
-      document.querySelector('#b'+ i).querySelector('.task-circle').className='task-circle task-circle-green';
+      document.querySelector('#b' + i).querySelector('.task-circle').className='task-circle task-circle-green';
+      document.querySelector('#b' + i).querySelector('.task-ready').style.display = 'none';
+      document.querySelector('#b' + i).querySelector('.task-unready').style.display = 'inline-block';
     }
   });
 }
