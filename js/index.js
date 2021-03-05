@@ -51,7 +51,7 @@ window.onload = () => {
     for(let i = 0; i < tasks.length; ++i)
     {
       tasks[i].readiness='READY';
-      document.querySelector('#'+ id).querySelector('.task-circle').className='task-circle task-circle-green';
+      document.querySelector('#b'+ i).querySelector('.task-circle').className='task-circle task-circle-green';
     }
   });
 }
